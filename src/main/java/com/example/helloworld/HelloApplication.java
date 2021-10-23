@@ -35,25 +35,25 @@ class Hello {
 		return "<h1>We received ID as "+ String.valueOf(ids)+"</h1>";
 	}
 
-	@GetMapping("/add/{a}/plus/{b}")
+	@GetMapping("/calc/{a}/plus/{b}")
 	String add(@PathVariable Long a, @PathVariable Long b) {
 		long ids = a + b;
 		return "<h1>Addition "+ String.valueOf(ids)+"</h1>";
 	}
 
-	@GetMapping("/add/{a}/minus/{b}")
+	@GetMapping("/calc/{a}/minus/{b}")
 	String minus(@PathVariable Long a, @PathVariable Long b) {
 		long ids = a - b;
 		return "<h1>Subtraction "+ String.valueOf(ids)+"</h1>";
 	}
 
-	@GetMapping("/add/{a}/multi/{b}")
+	@GetMapping("/calc/{a}/multi/{b}")
 	String multi(@PathVariable Long a, @PathVariable Long b) {
 		long ids = a * b;
 		return "<h1>Multiplication "+ String.valueOf(ids)+"</h1>";
 	}
 
-	@GetMapping("/add/{a}/div/{b}")
+	@GetMapping("/calc/{a}/div/{b}")
 	String div(@PathVariable Long a, @PathVariable Long b) {
 		if (b == 0){
 			return "<h1>Infinite</h1>"
