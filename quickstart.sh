@@ -6,12 +6,12 @@ source "/home/azureuser/.sdkman/bin/sdkman-init.sh" &&
 sdk install springboot && 
 sdk install gradle 4.5.1 && 
 spring init --build=gradle --dependencies=web --name=hello hello-world && 
-cd hello-world && 
-./gradlew build && 
-cd .. &&
 git clone https://github.com/ManishSharma-99/spring.git  && 
 rm hello-world/src/main/java/com/example/helloworld/HelloApplication.java &&
 mv spring/src/main/java/com/example/helloworld/HelloApplication.java hello-world/src/main/java/com/example/helloworld/ &&
+cd hello-world && 
+./gradlew build && 
+cd ../ &&
 sudo mv spring/helloworld.service /etc/systemd/system/ && 
 sudo systemctl start helloworld && 
 sudo rm /etc/nginx/sites-enabled/default && 
