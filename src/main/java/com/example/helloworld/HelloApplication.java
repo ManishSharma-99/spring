@@ -56,7 +56,7 @@ class Hello {
 	@GetMapping("/calc/{a}/div/{b}")
 	String div(@PathVariable Long a, @PathVariable Long b) {
 		if (b == 0){
-			return "<h1>Infinite</h1>"
+			return "<h1>Infinite</h1>";
 		}
 		long ids = a / b;
 		return "<h1>Division "+ String.valueOf(ids)+"</h1>";
